@@ -39,7 +39,7 @@ const chrome = require('selenium-webdriver/chrome');
             console.log("❌ Falha no cenário 2.");
         }
 
-        console.log("CENÁRIO 3: Verificar mensagem de email inválido");
+        console.log("CENÁRIO 3: Login com email no formato inválido");
         try {
             await driver.get('https://demo.automationtesting.in/SignIn.html');
             await driver.findElement(By.css("input[placeholder='E mail']")).sendKeys('1223');

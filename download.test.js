@@ -3,7 +3,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
 
-(async function loginTests() {
+(async function downloadtests() {
     let options = new chrome.Options();
     options.addArguments('--no-sandbox');
     options.addArguments('--log-level=3');
@@ -14,7 +14,7 @@ const chrome = require('selenium-webdriver/chrome');
         .build();
 
     try {
-        console.log("CENÁRIO 1: Realizar Upload de arquivo");
+        console.log("CENÁRIO 1: Realizar Download de arquivo");
         try {
             const fileInput = await driver.findElement(By.id('input-4'));
 
@@ -24,7 +24,7 @@ const chrome = require('selenium-webdriver/chrome');
             await driver.sleep(5000);
 
         } catch {
-            console.log("❌ Erro no cenário 2");
+            console.log("❌ Erro no cenário 1");
         }
 
     } catch {
